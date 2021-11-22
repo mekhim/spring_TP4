@@ -37,3 +37,6 @@ public interface IPeopleDAO extends CrudRepository<People,Integer> {
     void deleteBy_id(int id);
 
 }
+
+
+

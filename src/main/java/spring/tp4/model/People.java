@@ -14,7 +14,6 @@ public class People {
     private Integer _id;
     private String lastname;
     private String firstname;
-
     private String address;
 
 
