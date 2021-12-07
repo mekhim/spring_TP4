@@ -1,4 +1,4 @@
-package spring.tp4.model;
+package spring.people.model;
 
 import org.springframework.stereotype.Component;
 

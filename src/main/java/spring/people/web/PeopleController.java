@@ -1,9 +1,11 @@
-package spring.tp4.web;
+package spring.people.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.*;
-import spring.tp4.dao.IPeopleDAO;
-import spring.tp4.model.People;
+import spring.people.dao.IPeopleDAO;
+import spring.people.model.People;
 
 import java.util.List;
 
@@ -11,11 +13,20 @@ import java.util.List;
 @CrossOrigin
 public class PeopleController {
 
+    @Value("${me}")
+    private String me;
+
     private final IPeopleDAO dao;
 
     @Autowired
     public PeopleController(IPeopleDAO dao) {
         this.dao = dao;
+    }
+
+    @GetMapping(value = "/cestqui")
+    public String getName(){
+        System.out.println("coucou");
+        return me;
     }
 
     @GetMapping(value="/people")

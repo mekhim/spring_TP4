@@ -1,7 +1,7 @@
-package spring.tp4.dao;
+package spring.people.dao;
 
 import org.springframework.data.repository.CrudRepository;
-import spring.tp4.model.People;
+import spring.people.model.People;
 
 import javax.transaction.Transactional;
 import java.util.List;
